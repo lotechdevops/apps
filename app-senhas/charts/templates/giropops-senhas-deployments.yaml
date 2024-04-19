@@ -6,7 +6,7 @@ metadata:
   labels:
    {{- include "app.labels" $config | nindent 4 }}
 spec:
-  replicas: {{ $config.replicas | default 2}}
+  replicas: {{ $config.replicas | default 4}}
   selector:
     matchLabels:
       app: {{ $config.labels.app }}
